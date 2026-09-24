@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "AMR-UNBIND"
+authors:
+  - given-names: "MK"
+date-released: 2026-09-24
+url: "https://github.com/[YOUR USERNAME]/[YOUR REPO NAME]"
+license: MIT
