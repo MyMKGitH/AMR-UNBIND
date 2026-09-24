@@ -20,6 +20,7 @@ pinned: false
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.3.2-orange.svg)](#-changelog)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MyMKGitH/AMR-UNBIND/blob/main/notebooks/AMR-UNBIND-1_3_2.ipynb)
+[![DOI](https://zenodo.org/badge/1386341972.svg)](https://doi.org/10.5281/zenodo.22948215)
 
 AMR-UNBIND is an open-source scientific software pipeline for studying antibiotic–protein ligand unbinding using Steered Molecular Dynamics (SMD) in OpenMM. The engine automates the workflow from protein and ligand preparation through explicit-solvent molecular dynamics, forced ligand dissociation, and quantitative trajectory analysis. It combines a command-line interface for computational and HPC workflows with an interactive Streamlit dashboard for researchers who prefer a graphical interface.
 
