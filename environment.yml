@@ -1,0 +1,41 @@
+name: amr-unbind
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=2.0,<2.3
+  - pandas>=2.2,<3
+  - scipy>=1.12,<2
+  - biopython>=1.85,<2
+  - rdkit>=2025.9,<2026
+  - scikit-learn>=1.5,<2
+  - gemmi>=0.7.5,<1
+  - openmm>=8.6.0,<9
+  - pdbfixer>=1.12,<2
+  - openff-toolkit>=0.19.0,<0.21
+  # openmmforcefields must stay >=0.15.0: this project's SystemGenerator calls
+  # (see amr_unbind/simulation.py) rely on the periodic/non-periodic
+  # forcefield_kwargs split that 0.15.0 made mandatory. Keep this floor
+  # identical across environment.yml, environment-docking.yml, and
+  # requirements.txt -- these three drifted out of sync once before
+  # (this file was still pinned to the old >=0.16.0 floor after the other
+  # two were corrected) and silently diverging again is exactly the kind
+  # of inconsistency a fresh `micromamba create`/`pip install` in a
+  # different one of these three environments could resurface.
+  - openmmforcefields>=0.15.0,<1
+  - pytest>=8,<9
+  - pip
+  - pip:
+      - streamlit>=1.40,<2
+      - plotly>=5.24,<7
+      - py3Dmol>=2.0,<3
+      - stmol>=0.0.9,<1
+      # Optional: see the matching note in requirements.txt.
+      - psutil>=5.9,<8
+      # Not required by amr_unbind itself today; see requirements.txt for why
+      # these are still included (ML roadmap + the Windows OpenMP conflict
+      # that KMP_DUPLICATE_LIB_OK works around).
+      - torch>=2.1.0,<3
+      - torchvision>=0.16.0,<1
+      - ipython_genutils>=0.2.0
+

@@ -1,0 +1,13 @@
+# Optional: only needed to use the Modal cloud-GPU backend
+# (amr_unbind/cloud.py, "Cloud -- Modal GPU" in the app, or
+# --compute modal on the CLI). Not required for local runs, and not
+# required for the Google Colab notebook backend, which needs nothing
+# installed here at all.
+#
+# No upper pin: Modal's SDK moves quickly and this project tracks whatever
+# `modal.Image.from_dockerfile`, `modal.Volume`, `modal.Function.from_name`,
+# and (optionally) `Function.with_options` resolve to in a current install.
+# Run `modal --version` after installing to see what you have; amr_unbind/
+# cloud.py falls back gracefully (with a clear message) if your version
+# lacks `with_options`.
+modal>=0.60

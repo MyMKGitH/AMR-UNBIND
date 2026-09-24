@@ -1,0 +1,3 @@
+3PTB SMILES
+
+NC(=N)c1ccccc1

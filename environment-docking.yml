@@ -1,0 +1,38 @@
+name: amr-unbind-docking
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - openff-toolkit
+  - openff-interchange
+  - lxml
+  - cuda-version=11.8
+  - pip
+  - pip:
+      - numpy>=2.0,<2.3
+      - pandas>=2.2,<3
+      - scipy>=1.12,<2
+      - biopython>=1.85,<2
+      - rdkit>=2025.9,<2026
+      - scikit-learn>=1.5,<2
+      - gemmi>=0.7.5,<1
+      - streamlit>=1.40,<2
+      - plotly>=5.24,<7
+      - py3Dmol>=2.0,<3
+      - stmol>=0.0.9,<1
+      # Optional: see the matching note in requirements.txt.
+      - psutil>=5.9,<8
+      - openmm>=8.6.0,<9
+      - pdbfixer>=1.12,<2
+      # openmmforcefields must stay >=0.15.0: keep this floor identical
+      # across requirements.txt, environment.yml, and this file -- see the
+      # full explanation in requirements.txt.
+      - openmmforcefields>=0.15.0,<1
+      - pytest>=8,<9
+      # Not required by amr_unbind itself today; see requirements.txt.
+      - torch>=2.1.0,<3
+      - torchvision>=0.16.0,<1
+      - meeko==0.8.0
+      - vina==1.2.7
+      - ipython_genutils>=0.2.0
+

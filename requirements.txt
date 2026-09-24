@@ -1,0 +1,38 @@
+numpy>=2.0,<2.3
+pandas>=2.2,<3
+scipy>=1.12,<2
+biopython>=1.85,<2
+rdkit>=2025.9,<2026
+scikit-learn>=1.5,<2
+streamlit>=1.40,<2
+plotly>=5.24,<7
+py3Dmol>=2.0,<3
+stmol>=0.0.9,<1
+gemmi>=0.7.5,<1
+# Optional: amr_unbind/progress.py's Heartbeat uses this for the CPU/memory
+# usage shown during long blocking calls (Vina docking, Meeko preparation,
+# minimization). Not required -- resource_usage_snapshot() returns None
+# without it, and every progress message just omits that part.
+psutil>=5.9,<8
+openmm>=8.6.0,<9
+pdbfixer>=1.12,<2
+openff-toolkit>=0.19.0,<0.21
+# openmmforcefields must stay >=0.15.0: this project's SystemGenerator calls
+# (see amr_unbind/simulation.py) rely on the periodic/non-periodic
+# forcefield_kwargs split that 0.15.0 made mandatory. Keep this floor
+# identical across requirements.txt, environment.yml, and
+# environment-docking.yml -- these three drifted out of sync once before.
+# Exact-pinning every one of these five packages with `==` has been
+# observed to fail dependency resolution on some platforms (notably
+# pip-on-Windows); `>=`/`<` ranges here keep the same practical floor
+# while letting the resolver actually find a compatible build.
+openmmforcefields>=0.15.0,<1
+pytest>=8,<9
+# Not required by amr_unbind itself today (see the ML roadmap in README.md).
+# Included because it is commonly present when extending amr_unbind.ml with
+# a PyTorch model, and because a PyTorch install is the most common source
+# of the Windows "OMP: Error #15" duplicate-OpenMP-runtime crash that
+# amr_unbind/__init__.py and app.py work around via KMP_DUPLICATE_LIB_OK.
+torch>=2.1.0,<3
+torchvision>=0.16.0,<1
+ipython_genutils>=0.2.0

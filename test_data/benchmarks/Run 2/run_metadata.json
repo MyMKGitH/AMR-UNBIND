@@ -1,0 +1,71 @@
+{
+  "protein": {
+    "source": "/tmp/amr_unbind_i_gqzxbs/3PTB_clean.pdb",
+    "prepared": "amr_workspace/runs/20260924T190808Z_3ptb_clean_2d185aef/prepared_protein.pdb",
+    "target_id": "3PTB_clean",
+    "missing_residue_count": 0,
+    "missing_atom_count": 0,
+    "nonstandard_residue_count": 0,
+    "original_chain_ids": [
+      "A"
+    ]
+  },
+  "ligand": {
+    "sdf_path": "amr_workspace/runs/20260924T190808Z_3ptb_clean_2d185aef/ligand_initial.sdf",
+    "canonical_smiles": "N=C(N)c1ccccc1",
+    "formula": "C7H8N2",
+    "formal_charge": 0,
+    "n_atoms": 17
+  },
+  "geometry": {
+    "pull_vector": [
+      0.292060357050431,
+      -0.15542094075922303,
+      -0.9436869602856093
+    ],
+    "core_point_angstrom": [
+      3.5550000369548798,
+      17.2042498588562,
+      39.397000312805176
+    ],
+    "exit_point_angstrom": [
+      9.050125062465668,
+      14.279999852180481,
+      21.641499757766724
+    ],
+    "core_exit_distance_nm": 1.8815032211173826
+  },
+  "docking_center_angstrom_used": null,
+  "docking_center_source": null,
+  "simulation": {
+    "temperature_kelvin": 300.0,
+    "pressure_atm": 1.0,
+    "friction_per_ps": 1.0,
+    "timestep_fs": 2.0,
+    "ionic_strength_molar": 0.15,
+    "solvation_padding_nm": 1.0,
+    "nvt_equilibration_ps": 10.0,
+    "npt_equilibration_ps": 10.0,
+    "pull_distance_nm": 0.8,
+    "pull_velocity_nm_per_ps": 0.005,
+    "steering_k_kj_mol_nm2": 500.0,
+    "report_interval_steps": 100,
+    "checkpoint_interval_steps": 5000,
+    "minimization_iterations": 500,
+    "seed": 20260907,
+    "protein_restraint_k_kj_mol_nm2": 100.0,
+    "pH": 7.4,
+    "forcefield_protein": "amber14-all.xml",
+    "forcefield_water": "amber14/tip3p.xml",
+    "small_molecule_forcefield": "openff-2.2.1",
+    "preferred_platform": "auto",
+    "cuda_device_index": "0"
+  },
+  "docking": null,
+  "build": {
+    "n_protein_atoms": 3220,
+    "n_ligand_atoms": 17,
+    "n_total_atoms": 27251,
+    "n_protein_backbone_restraint_atoms": 892
+  }
+}
